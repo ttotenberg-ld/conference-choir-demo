@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/conference-choir-demo/static/css/main.073c9b0a.css",
-    "main.js": "/conference-choir-demo/static/js/main.272f99a3.js",
+    "main.js": "/conference-choir-demo/static/js/main.9e7603fc.js",
     "static/js/787.cdebe8c0.chunk.js": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js",
     "index.html": "/conference-choir-demo/index.html",
     "main.073c9b0a.css.map": "/conference-choir-demo/static/css/main.073c9b0a.css.map",
-    "main.272f99a3.js.map": "/conference-choir-demo/static/js/main.272f99a3.js.map",
+    "main.9e7603fc.js.map": "/conference-choir-demo/static/js/main.9e7603fc.js.map",
     "787.cdebe8c0.chunk.js.map": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.272f99a3.js"
+    "static/js/main.9e7603fc.js"
   ]
 }
