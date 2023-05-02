@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import MIDISounds from 'midi-sounds-react';
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
 
@@ -37,8 +37,10 @@ function Sounds ({ flags, ldClient }) {
   
 
   ldClient.on('change', (settings) => {
-    midiSounds.current.cancelQueue();
-    playTestInstrument();
+    if (midiSounds.current) {
+      stopTestInstrument();
+      playTestInstrument();
+    }
   });
 
   const playTestInstrument = () => {
@@ -50,7 +52,7 @@ function Sounds ({ flags, ldClient }) {
   }
 
 
-  return (
+  return (flags.showSoundTest === false) ? (
       <div className="App">
           <p className="App-intro">Join the choir!</p>
           <p><button onClick={playTestInstrument}>Play</button></p>
@@ -58,6 +60,8 @@ function Sounds ({ flags, ldClient }) {
           <p><button onClick={stopTestInstrument}>Stop!</button></p>
           <MIDISounds ref={midiSounds} appElementName="root" instruments={[3]} />
       </div>
+  ) : (
+    <div />
   );
 }
 
