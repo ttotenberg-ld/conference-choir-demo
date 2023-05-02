@@ -36,10 +36,23 @@ function Sounds ({ flags, ldClient }) {
   }
   
 
-  ldClient.on('change', (settings) => {
+  ldClient.on('change:enable-sound', (settings) => {
     if (midiSounds.current) {
       stopTestInstrument();
       playTestInstrument();
+    }
+  });
+
+  ldClient.on('change:config-chord', (settings) => {
+    if (midiSounds.current) {
+      stopTestInstrument();
+      playTestInstrument();
+    }
+  });
+
+  ldClient.on('change:show-sound-test', (settings) => {
+    if (midiSounds.current) {
+      stopTestInstrument();
     }
   });
 
