@@ -1,15 +1,24 @@
 {
   "files": {
     "main.css": "/conference-choir-demo/static/css/main.073c9b0a.css",
-    "main.js": "/conference-choir-demo/static/js/main.9e7603fc.js",
+    "main.js": "/conference-choir-demo/static/js/main.083f7471.js",
+    "static/js/845.4ee4f3c1.chunk.js": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js",
     "static/js/787.cdebe8c0.chunk.js": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js",
+    "static/media/popSound4.mp3": "/conference-choir-demo/static/media/popSound4.73501a4bbb93fc6d302b.mp3",
+    "static/media/popSound5.mp3": "/conference-choir-demo/static/media/popSound5.85429a6c5e0c1f63755c.mp3",
+    "static/media/popSound2.mp3": "/conference-choir-demo/static/media/popSound2.621def2beba50f8d7181.mp3",
+    "static/media/popSound6.mp3": "/conference-choir-demo/static/media/popSound6.de93d1fc3f1ee165e9e4.mp3",
+    "static/media/popSound1.mp3": "/conference-choir-demo/static/media/popSound1.22181898e599c5e99dee.mp3",
+    "static/media/popSound3.mp3": "/conference-choir-demo/static/media/popSound3.22181898e599c5e99dee.mp3",
+    "static/media/popSound7.mp3": "/conference-choir-demo/static/media/popSound7.17647a583fb49e2e9803.mp3",
     "index.html": "/conference-choir-demo/index.html",
     "main.073c9b0a.css.map": "/conference-choir-demo/static/css/main.073c9b0a.css.map",
-    "main.9e7603fc.js.map": "/conference-choir-demo/static/js/main.9e7603fc.js.map",
+    "main.083f7471.js.map": "/conference-choir-demo/static/js/main.083f7471.js.map",
+    "845.4ee4f3c1.chunk.js.map": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js.map",
     "787.cdebe8c0.chunk.js.map": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.9e7603fc.js"
+    "static/js/main.083f7471.js"
   ]
 }
