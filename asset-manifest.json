@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/conference-choir-demo/static/css/main.073c9b0a.css",
-    "main.js": "/conference-choir-demo/static/js/main.083f7471.js",
+    "main.js": "/conference-choir-demo/static/js/main.4f2272f2.js",
     "static/js/845.4ee4f3c1.chunk.js": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js",
     "static/js/787.cdebe8c0.chunk.js": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js",
     "static/media/popSound4.mp3": "/conference-choir-demo/static/media/popSound4.73501a4bbb93fc6d302b.mp3",
@@ -13,12 +13,12 @@
     "static/media/popSound7.mp3": "/conference-choir-demo/static/media/popSound7.17647a583fb49e2e9803.mp3",
     "index.html": "/conference-choir-demo/index.html",
     "main.073c9b0a.css.map": "/conference-choir-demo/static/css/main.073c9b0a.css.map",
-    "main.083f7471.js.map": "/conference-choir-demo/static/js/main.083f7471.js.map",
+    "main.4f2272f2.js.map": "/conference-choir-demo/static/js/main.4f2272f2.js.map",
     "845.4ee4f3c1.chunk.js.map": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js.map",
     "787.cdebe8c0.chunk.js.map": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.083f7471.js"
+    "static/js/main.4f2272f2.js"
   ]
 }
