@@ -82,14 +82,19 @@ function Sounds ({ flags, ldClient }) {
 
   // Function that plays the midi sounds
   const playTestInstrument = () => {
-    play();
-    midiSounds.current.playChordNow(590, getNewSound(), 9999);
+    if (getPart() === 'solo') {
+      play();
+    } else if (getPart() !== 'none') {
+      midiSounds.current.playChordNow(590, getNewSound(), 9999);
+    }
   };
 
   // Function that stops the midi sounds
   const stopTestInstrument = () => {
     stop();
-    midiSounds.current.cancelQueue();
+    if (midiSounds.current) {
+      midiSounds.current.cancelQueue();
+    }
   }
 
 
@@ -97,7 +102,7 @@ function Sounds ({ flags, ldClient }) {
       <div className="App">
           <p className="App-intro">Join the choir!</p>
           <p><button onClick={playTestInstrument}>Play</button></p>
-          <p>You are currently in the {getPart()} section!</p>
+          <p>Your part is: {getPart()}</p>
           <p className="App-intro">Stop the choir!</p>
           <p><button onClick={stopTestInstrument}>Stop!</button></p>
           <MIDISounds ref={midiSounds} appElementName="root" instruments={[590]} />
