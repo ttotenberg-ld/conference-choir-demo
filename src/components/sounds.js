@@ -1,23 +1,32 @@
 import React, { useRef } from 'react';
 import MIDISounds from 'midi-sounds-react';
+import rr from "../media/rko_rr.mp3";
+import useSound from "use-sound";
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
 
 function Sounds ({ flags, ldClient }) {
+  // Functions to play and stop the soloist mp3
+  let [play, { stop }] = useSound(rr, {interrupt: true});
+
+  // Initialize the midiSounds instance
   const midiSounds = useRef();
 
+  // Call LD and return a JSON of notes in a chord
   function getChord() {
     const chord = ldClient.variation("config-chord").notes;
     return chord
   }
   
+  // Call LD and return the part of the chord that should play
   function getPart() {
     const part = ldClient.variation("enable-sound");
     return part
   }
   
-
   let sound = getChord();
   
+  // Assign the part of the overall chord that should be played
+  // 'solo' and 'none' both don't play anything through the midi function
   function getNewSound() {
     if (getPart() === 'bass') {
       sound = [getChord()[0]];
@@ -37,18 +46,25 @@ function Sounds ({ flags, ldClient }) {
   
 
   ldClient.on('change:enable-sound', (settings) => {
-    if ((midiSounds.current) && (getNewSound() === [0])) {
+    if ((midiSounds.current) && (getPart() === 'none')) {
+      stop();
       stopTestInstrument();
+    } else if ((midiSounds.current) && (getPart() === 'solo')) {
+      stopTestInstrument();
+      play();
     } else if (midiSounds.current) {
+      stop();
       stopTestInstrument();
       playTestInstrument();
     }
   });
 
   ldClient.on('change:config-chord', (settings) => {
-    if ((midiSounds.current) && (getNewSound() === [0])) {
+    if ((midiSounds.current) && (getPart() === 'none')) {
+      stop();
       stopTestInstrument();
     } else if (midiSounds.current) {
+      stop();
       stopTestInstrument();
       playTestInstrument();
     }
@@ -56,6 +72,7 @@ function Sounds ({ flags, ldClient }) {
 
   ldClient.on('change:show-sound-test', (settings) => {
     if ((midiSounds.current) && (flags.showSoundTest)) {
+      stop();
       stopTestInstrument();
     }
   });
@@ -68,14 +85,17 @@ function Sounds ({ flags, ldClient }) {
     midiSounds.current.cancelQueue();
   }
 
+  
 
   return (flags.showSoundTest === false) ? (
       <div className="App">
           <p className="App-intro">Join the choir!</p>
           <p><button onClick={playTestInstrument}>Play</button></p>
+          <p><button onClick={() => {play()}}>Play Solo!</button></p>
           <p>You are currently in the {getPart()} section!</p>
           <p className="App-intro">Stop the choir!</p>
           <p><button onClick={stopTestInstrument}>Stop!</button></p>
+          <p><button onClick={() => {stop()}}>Stop Solo!</button></p>
           <MIDISounds ref={midiSounds} appElementName="root" instruments={[590]} />
       </div>
   ) : (
