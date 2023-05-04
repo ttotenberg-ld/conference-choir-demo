@@ -5,6 +5,7 @@ import useSound from "use-sound";
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
 
 function Sounds ({ flags, ldClient }) {
+
   // Functions to play and stop the soloist mp3
   let [play, { stop }] = useSound(rr, {interrupt: true});
 
@@ -44,7 +45,9 @@ function Sounds ({ flags, ldClient }) {
     return sound;
   }
   
-
+  // Listen to flag changes. Stop sounds if 'enable-sound' is set to 'none
+  // Play the solo if 'enable-sound' is set to 'solo'
+  // 
   ldClient.on('change:enable-sound', (settings) => {
     if ((midiSounds.current) && (getPart() === 'none')) {
       stop();
@@ -77,25 +80,26 @@ function Sounds ({ flags, ldClient }) {
     }
   });
 
+  // Function that plays the midi sounds
   const playTestInstrument = () => {
+    play();
     midiSounds.current.playChordNow(590, getNewSound(), 9999);
   };
 
+  // Function that stops the midi sounds
   const stopTestInstrument = () => {
+    stop();
     midiSounds.current.cancelQueue();
   }
 
-  
 
   return (flags.showSoundTest === false) ? (
       <div className="App">
           <p className="App-intro">Join the choir!</p>
           <p><button onClick={playTestInstrument}>Play</button></p>
-          <p><button onClick={() => {play()}}>Play Solo!</button></p>
           <p>You are currently in the {getPart()} section!</p>
           <p className="App-intro">Stop the choir!</p>
           <p><button onClick={stopTestInstrument}>Stop!</button></p>
-          <p><button onClick={() => {stop()}}>Stop Solo!</button></p>
           <MIDISounds ref={midiSounds} appElementName="root" instruments={[590]} />
       </div>
   ) : (
