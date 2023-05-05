@@ -46,15 +46,11 @@ function Sounds ({ flags, ldClient }) {
   }
   
   // Listen to flag changes. Stop sounds if 'enable-sound' is set to 'none
-  // Play the solo if 'enable-sound' is set to 'solo'
-  // 
+  // Play sounds otherwise
   ldClient.on('change:enable-sound', (settings) => {
     if ((midiSounds.current) && (getPart() === 'none')) {
       stop();
       stopTestInstrument();
-    } else if ((midiSounds.current) && (getPart() === 'solo')) {
-      stopTestInstrument();
-      play();
     } else if (midiSounds.current) {
       stop();
       stopTestInstrument();
@@ -73,6 +69,7 @@ function Sounds ({ flags, ldClient }) {
     }
   });
 
+  // Stop sounds if we show sound test
   ldClient.on('change:show-sound-test', (settings) => {
     if ((midiSounds.current) && (flags.showSoundTest)) {
       stop();
@@ -80,7 +77,15 @@ function Sounds ({ flags, ldClient }) {
     }
   });
 
-  // Function that plays the midi sounds
+  // Stop sounds if we hide buttons
+  ldClient.on('change:show-buttons', (settings) => {
+    if ((midiSounds.current) && (flags.showButtons === false)) {
+      stop();
+      stopTestInstrument();
+    }
+  });
+
+  // Function that plays the sounds
   const playTestInstrument = () => {
     if (getPart() === 'solo') {
       play();
@@ -89,7 +94,7 @@ function Sounds ({ flags, ldClient }) {
     }
   };
 
-  // Function that stops the midi sounds
+  // Function that stops the sounds
   const stopTestInstrument = () => {
     stop();
     if (midiSounds.current) {

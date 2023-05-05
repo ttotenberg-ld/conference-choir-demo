@@ -2,7 +2,7 @@ import QRCode from "react-qr-code";
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
 
 //Change QRURL to the URL where you'll be hosting this app
-const QRURL = "https://ttotenberg-ld.github.io/conference-choir-demo";
+let QR_URL = document.location.toString();
 
 const qrCodeHome = ({ flags }) => {
 
@@ -13,7 +13,7 @@ const qrCodeHome = ({ flags }) => {
       <br />
       <span style={{ color: 'black' }}><center>Scan me!</center></span>
       <div className="qr-wrapper">
-        <QRCode value={QRURL} />
+        <QRCode value={QR_URL} />
       </div>
     </div>
   ) : (
