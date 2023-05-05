@@ -98,7 +98,7 @@ function Sounds ({ flags, ldClient }) {
   }
 
 
-  return (flags.showSoundTest === false) ? (
+  return ((flags.showSoundTest === false) && (flags.showButtons === true)) ? (
       <div className="App">
           <p className="App-intro">Join the choir!</p>
           <p><button onClick={playTestInstrument}>Play</button></p>

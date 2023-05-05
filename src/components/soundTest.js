@@ -48,7 +48,7 @@ const SoundTest = ({ flags }) => {
         play();
       }
 
-    return flags.showSoundTest ? (
+    return (flags.showSoundTest && flags.showButtons) ? (
         <div>
             <br />
             <Button onClick={() => {clicked()}}>
