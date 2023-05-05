@@ -2,19 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-body {
+  background: rgb(45,197,208);
+  background: linear-gradient(135deg, rgba(45,197,208,1) 0%, rgba(28,41,106,1) 50%, rgba(160,5,167,1) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +12,107 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 100%;
+  overflow: hidden;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.qr-wrapper {
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  padding: 20px;
+}
+
+
+/* Hero Text */
+.css-1fe58qq {
+  margin: 0px;
+  font-family: Audimat;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url("./assets/fonts/Sohne-Buch.otf") format("opentype");
+}
+
+.subtitle {
+  font-family: Sohne;
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Audimat";
+  src: url("./assets/fonts/Audimat3000-Regulier.woff2") format("woff2");
+}
+
+.heroText {
+  background: -webkit-linear-gradient(#eee,#333);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #9eadf1;
+  background-image: linear-gradient(0deg, rgb(207, 161, 210) 0%,  rgba(221,244,242,1) 100%);
+  margin: 0px;
+  font-family: Audimat;
+  font-weight: 300;
+  font-size: 7rem;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 15px;
+}
+
+.midiControllerContainer {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 1px;
+  max-width: 1px;
+  overflow: hidden;
+}
+
+.midiController {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: -10px;
+}
+
+.bottomLogoContainer {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 30%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.bottomLogo {
+  rotate: 90deg;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 70%;
+  margin-bottom: -10%;
 }

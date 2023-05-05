@@ -110,7 +110,10 @@ function Sounds ({ flags, ldClient }) {
           <p>Your part is: {getPart()}</p>
           <p className="App-intro">Stop the choir!</p>
           <p><button onClick={stopTestInstrument}>Stop!</button></p>
-          <MIDISounds ref={midiSounds} appElementName="root" instruments={[590]} />
+          <div className="midiControllerContainer">
+            <MIDISounds className="midiController" ref={midiSounds} appElementName="root" instruments={[590]} />
+          </div>
+          
       </div>
   ) : (
     <div />

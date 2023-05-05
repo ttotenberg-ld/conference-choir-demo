@@ -138,3 +138,6 @@ yarn-error.log*
 
 # VSCode
 .vscode
+
+# Fonts
+fonts
