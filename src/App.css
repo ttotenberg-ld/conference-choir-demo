@@ -177,11 +177,9 @@
 }
 
 .bottomLogo {
-  rotate: 90deg;
   margin: auto;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   right: 0;
-  max-width: 70%;
-  margin-bottom: -10%;
+  max-width: 40%;
 }
