@@ -51,11 +51,14 @@ function Sounds ({ flags, ldClient }) {
     if ((midiSounds.current) && (getPart() === 'none')) {
       stop();
       stopTestInstrument();
+    } else if ((midiSounds.current) && (getPart() === 'solo')) {
+      stop();
+      stopTestInstrument();
+      play();
     } else if (midiSounds.current) {
       stop();
       stopTestInstrument();
       playTestInstrument();
-      play();
     }
   });
 
