@@ -55,6 +55,7 @@ function Sounds ({ flags, ldClient }) {
       stop();
       stopTestInstrument();
       playTestInstrument();
+      play();
     }
   });
 
