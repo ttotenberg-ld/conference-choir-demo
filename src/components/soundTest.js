@@ -5,26 +5,9 @@ import pop4 from "../media/popSound4.mp3";
 import pop5 from "../media/popSound5.mp3";
 import pop6 from "../media/popSound6.mp3";
 import pop7 from "../media/popSound7.mp3";
-import styled from "styled-components";
 import React, { useState } from 'react';
 import useSound from "use-sound";
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
-
-const Button = styled.button`
-        background-color: black;
-        color: white;
-        font-size: 20px;
-        padding: 10px 60px;
-        border-radius: 5px;
-        margin: 10px 10px;
-        cursor: pointer;
-
-        &:disabled {
-            color: grey;
-            opacity: 0.7;
-            cursor: default;
-    }
-    `;
 
 const SoundTest = ({ flags }) => {
     
@@ -51,9 +34,7 @@ const SoundTest = ({ flags }) => {
     return (flags.showSoundTest && flags.showButtons) ? (
         <div>
             <br />
-            <Button onClick={() => {clicked()}}>
-            <b>Play Test!</b>
-            </Button>
+            <button className="soundTestButton" onClick={() => {clicked()}}>Play Test!</button>
         </div>
     ) : (
         <div />

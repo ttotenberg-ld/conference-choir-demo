@@ -12,7 +12,6 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   overflow: hidden;
@@ -72,14 +71,32 @@
 }
 
 .titleContainer {
-  position: absolute;
   top: 15px;
 }
 
-.buttonContainer {
-  position: relative;
-  display: block;
+.soundTestButton {
+  margin: auto;
   top: 0;
+  left: 0;
+  right: 0;
+  background-color: #c4007d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 44px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.soundTestButton:active {
+  background-color: #a1006c;
+  color: white;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  display: inline-flex;
+  flex-direction: column;
   min-height: 30vh;
   min-height: calc(var(--vh, 1vh) * 30);
   z-index: 10;
@@ -155,7 +172,7 @@
   left: 0;
   right: 0;
   max-height: 30%;
-  max-width: 100%;
+  max-width: 50%;
   overflow: hidden;
 }
 
