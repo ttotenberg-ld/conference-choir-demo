@@ -104,16 +104,17 @@ function Sounds ({ flags, ldClient }) {
 
 
   return ((flags.showSoundTest === false) && (flags.showButtons === true)) ? (
-      <div className="App">
-          <p className="App-intro">Join the choir!</p>
-          <p><button onClick={playTestInstrument}>Play</button></p>
-          <p>Your part is: {getPart()}</p>
-          <p className="App-intro">Stop the choir!</p>
-          <p><button onClick={stopTestInstrument}>Stop!</button></p>
+      <div className="buttonContainer">
+          <p><button className="joinButton" onClick={playTestInstrument}>Join</button></p>
+          <br />
+          <div className="part">
+            <p>Your part is: {getPart()}</p>
+          </div>
+          <br />
+          <p><button className="leaveButton" onClick={stopTestInstrument}>Leave</button></p>
           <div className="midiControllerContainer">
             <MIDISounds className="midiController" ref={midiSounds} appElementName="root" instruments={[590]} />
           </div>
-          
       </div>
   ) : (
     <div />
