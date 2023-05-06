@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/conference-choir-demo/static/css/main.7457e9e3.css",
-    "main.js": "/conference-choir-demo/static/js/main.5647971e.js",
+    "main.css": "/conference-choir-demo/static/css/main.d5c6cf11.css",
+    "main.js": "/conference-choir-demo/static/js/main.7908dc05.js",
     "static/js/845.4ee4f3c1.chunk.js": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js",
     "static/js/787.cdebe8c0.chunk.js": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js",
     "static/media/rko_rr.mp3": "/conference-choir-demo/static/media/rko_rr.5443f8893a7e88e5562a.mp3",
@@ -15,13 +15,13 @@
     "static/media/popSound3.mp3": "/conference-choir-demo/static/media/popSound3.22181898e599c5e99dee.mp3",
     "static/media/popSound7.mp3": "/conference-choir-demo/static/media/popSound7.17647a583fb49e2e9803.mp3",
     "index.html": "/conference-choir-demo/index.html",
-    "main.7457e9e3.css.map": "/conference-choir-demo/static/css/main.7457e9e3.css.map",
-    "main.5647971e.js.map": "/conference-choir-demo/static/js/main.5647971e.js.map",
+    "main.d5c6cf11.css.map": "/conference-choir-demo/static/css/main.d5c6cf11.css.map",
+    "main.7908dc05.js.map": "/conference-choir-demo/static/js/main.7908dc05.js.map",
     "845.4ee4f3c1.chunk.js.map": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js.map",
     "787.cdebe8c0.chunk.js.map": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7457e9e3.css",
-    "static/js/main.5647971e.js"
+    "static/css/main.d5c6cf11.css",
+    "static/js/main.7908dc05.js"
   ]
 }
