@@ -1,5 +1,4 @@
-import getTable from '../util/getTable';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import MIDISounds from 'midi-sounds-react';
 import rr from "../media/rko_rr.mp3";
 import useSound from "use-sound";
@@ -74,23 +73,6 @@ function Sounds ({ flags, ldClient }) {
     }
   });
 
-  const soundTestList = [
-    1218,
-    1219
-  ];
-
-  const pitchTestList = [
-    65,
-    66,
-    67,
-    69,
-    70,
-    72
-  ]
-
-  const [randomSound, setRandomSound] = useState(soundTestList[Math.floor(Math.random()*soundTestList.length)]);
-  const [randomPitch, setRandomPitch] = useState(pitchTestList[Math.floor(Math.random()*pitchTestList.length)]);
-
   // Stop sounds if we show sound test
   ldClient.on('change:show-sound-test', (settings) => {
     if ((midiSounds.current) && (flags.showSoundTest)) {
@@ -109,11 +91,6 @@ function Sounds ({ flags, ldClient }) {
 
   // Function that plays the sounds
   const playTestInstrument = () => {
-    if (flags.showSoundTest) {
-      setRandomSound(soundTestList[Math.floor(Math.random()*soundTestList.length)]);
-      setRandomPitch(pitchTestList[Math.floor(Math.random()*pitchTestList.length)]);
-      midiSounds.current.playChordNow(randomSound, [randomPitch], 1)
-    }
     if (getPart() === 'solo') {
       play();
     } else if (getPart() !== 'none') {
@@ -129,31 +106,23 @@ function Sounds ({ flags, ldClient }) {
     }
   }
 
-  const table = getTable();
 
-  if (flags.showButtons === true) {
-    return (
-    <div className="buttonContainer">
-      <p><button className="joinButton" onClick={playTestInstrument}>Play</button></p>
-      <br />
-      
-      <br />
-      <p><button className="leaveButton" onClick={stopTestInstrument}>Stop</button></p>
-      <div className="midiControllerContainer">
-        <MIDISounds className="midiController" ref={midiSounds} appElementName="root" instruments={[590, 1218,
-    1219]} />
+  return ((flags.showSoundTest === false) && (flags.showButtons === true)) ? (
+      <div className="buttonContainer">
+          <p><button className="joinButton" onClick={playTestInstrument}>Join</button></p>
+          <br />
+          <div className="part">
+            <p>Your part is: {getPart()}</p>
+          </div>
+          <br />
+          <p><button className="leaveButton" onClick={stopTestInstrument}>Leave</button></p>
+          <div className="midiControllerContainer">
+            <MIDISounds className="midiController" ref={midiSounds} appElementName="root" instruments={[590]} />
+          </div>
       </div>
-      <div className="part">
-        <p>Hey table {table}. You're my favorite table.</p>
-        <p>Don't tell the others.</p>
-      </div>
-    </div>
-    );
-  } else {
-    return (
+  ) : (
     <div />
-    );
-  }
+  );
 }
 
 export default withLDConsumer()(Sounds);
