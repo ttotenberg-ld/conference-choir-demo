@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/conference-choir-demo/static/css/main.b5a879e5.css",
-    "main.js": "/conference-choir-demo/static/js/main.324e21d4.js",
-    "static/js/845.4ee4f3c1.chunk.js": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js",
-    "static/js/787.cdebe8c0.chunk.js": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js",
+    "main.css": "/conference-choir-demo/static/css/main.23ce5619.css",
+    "main.js": "/conference-choir-demo/static/js/main.8a943861.js",
+    "static/js/885.d3709561.chunk.js": "/conference-choir-demo/static/js/885.d3709561.chunk.js",
+    "static/js/453.d07add5d.chunk.js": "/conference-choir-demo/static/js/453.d07add5d.chunk.js",
     "static/media/rko_rr.mp3": "/conference-choir-demo/static/media/rko_rr.5443f8893a7e88e5562a.mp3",
-    "static/media/Sohne-Buch.otf": "/conference-choir-demo/static/media/Sohne-Buch.dedb51fce8fa5e68f7fc.otf",
-    "static/media/Audimat3000-Regulier.woff2": "/conference-choir-demo/static/media/Audimat3000-Regulier.307ed8f86873d9cea2ab.woff2",
+    "static/media/ld-logo-white.png": "/conference-choir-demo/static/media/ld-logo-white.fbb612839dea67dcb592.png",
+    "static/media/popSound4.mp3": "/conference-choir-demo/static/media/popSound4.73501a4bbb93fc6d302b.mp3",
+    "static/media/popSound5.mp3": "/conference-choir-demo/static/media/popSound5.85429a6c5e0c1f63755c.mp3",
+    "static/media/popSound2.mp3": "/conference-choir-demo/static/media/popSound2.621def2beba50f8d7181.mp3",
+    "static/media/popSound6.mp3": "/conference-choir-demo/static/media/popSound6.de93d1fc3f1ee165e9e4.mp3",
+    "static/media/popSound1.mp3": "/conference-choir-demo/static/media/popSound1.22181898e599c5e99dee.mp3",
+    "static/media/popSound3.mp3": "/conference-choir-demo/static/media/popSound3.22181898e599c5e99dee.mp3",
+    "static/media/popSound7.mp3": "/conference-choir-demo/static/media/popSound7.17647a583fb49e2e9803.mp3",
     "index.html": "/conference-choir-demo/index.html",
-    "main.b5a879e5.css.map": "/conference-choir-demo/static/css/main.b5a879e5.css.map",
-    "main.324e21d4.js.map": "/conference-choir-demo/static/js/main.324e21d4.js.map",
-    "845.4ee4f3c1.chunk.js.map": "/conference-choir-demo/static/js/845.4ee4f3c1.chunk.js.map",
-    "787.cdebe8c0.chunk.js.map": "/conference-choir-demo/static/js/787.cdebe8c0.chunk.js.map"
+    "main.23ce5619.css.map": "/conference-choir-demo/static/css/main.23ce5619.css.map",
+    "main.8a943861.js.map": "/conference-choir-demo/static/js/main.8a943861.js.map",
+    "885.d3709561.chunk.js.map": "/conference-choir-demo/static/js/885.d3709561.chunk.js.map",
+    "453.d07add5d.chunk.js.map": "/conference-choir-demo/static/js/453.d07add5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5a879e5.css",
-    "static/js/main.324e21d4.js"
+    "static/css/main.23ce5619.css",
+    "static/js/main.8a943861.js"
   ]
 }
