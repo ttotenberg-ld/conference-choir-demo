@@ -8,7 +8,7 @@ const qrCodeHome = ({ flags }) => {
 
     // The React SDK automatically converts flag keys with dashes and periods to camelCase.
     // See this page for details: https://docs.launchdarkly.com/sdk/client-side/react/react-web#flag-keys
-    return flags.showQrCode ? (
+    return flags.showConferenceQrCode ? (
     <div>
       <br />
       <span style={{ color: 'black' }}><center>Scan me!</center></span>

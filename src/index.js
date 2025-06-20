@@ -6,12 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 import { deviceType, osName } from "react-device-detect";
 import getDeviceKey from "./util/getDeviceKey";
-import getTable from "./util/getTable";
 
 const CLIENTKEY = "609ead905193530d7c28647b";
 
 let deviceKey = getDeviceKey();
-let tableId = getTable();
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -26,8 +24,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
       key: deviceKey,
       //dynamically set these custom attributes using the deviceType and osName selectors from the npm package
       type: deviceType,
-      os: osName,
-      table: tableId
+      os: osName
     },
   });
 

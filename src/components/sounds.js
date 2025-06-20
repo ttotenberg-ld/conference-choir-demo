@@ -1,4 +1,3 @@
-import getTable from '../util/getTable';
 import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import MIDISounds from 'midi-sounds-react';
 import rr from "../media/rko_rr.mp3";
@@ -56,9 +55,6 @@ function Sounds ({ flags, ldClient }) {
 
   // Current playing pop sound ref to manage cleanup
   const currentPopSound = useRef(null);
-
-  // Memoize table value
-  const table = useMemo(() => getTable(), []);
 
   // Cache LaunchDarkly flag values
   useEffect(() => {
