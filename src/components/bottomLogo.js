@@ -1,4 +1,4 @@
-import osmo from '.././assets/images/light-osmo.png'
+import osmo from '.././assets/images/ld-logo-white.png'
 
 const logo = () => {
     return (
