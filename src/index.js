@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
+import Observability from '@launchdarkly/observability';
 import { deviceType, osName } from "react-device-detect";
 import getDeviceKey from "./util/getDeviceKey";
 
@@ -26,6 +27,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
       type: deviceType,
       os: osName
     },
+    plugins: [ new Observability() ]
   });
 
   ReactDOM.render(
